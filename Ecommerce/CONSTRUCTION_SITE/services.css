@@ -33,15 +33,21 @@ header {
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
 }
 
-/* Logo Styling */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    margin-left: 20px;
 }
 
 .logo-image {
-    height: 50px;
+    height: 60px;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(99%) saturate(400%) hue-rotate(1deg) brightness(95%) contrast(97%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
 }
 
 .company-name {
@@ -266,13 +272,20 @@ footer p {
         font-size: 1.2rem;
     }
 }
-
-/* Scrollbar Customization */
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px; /* Thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #111; /* Dark background */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #FFD700;
-    border-radius: 4px;
+    background: #555; /* Slightly lighter thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Lighter on hover */
 }

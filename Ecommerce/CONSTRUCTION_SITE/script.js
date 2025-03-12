@@ -21,4 +21,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    let submitBtn = document.getElementById("submitBtn");
+    submitBtn.innerHTML = "Sending...";
+    submitBtn.disabled = true; // Disable button to prevent multiple clicks
+
+    let formData = new FormData(this);
+
+    fetch("send_email.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Show response from server
+        submitBtn.innerHTML = "Submit";
+        submitBtn.disabled = false;
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        alert("Error sending message.");
+        submitBtn.innerHTML = "Submit";
+        submitBtn.disabled = false;
+    });
+});
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formStatus = document.getElementById("form-status");
+
+    formStatus.textContent = "Sending message...";
+    formStatus.style.color = "white";
+    formStatus.style.display = "block";
+
+    setTimeout(() => {
+        formStatus.textContent = "Message sent successfully!";
+        formStatus.style.color = "#FFD700";
+    }, 2000);
+});
+
+
 
