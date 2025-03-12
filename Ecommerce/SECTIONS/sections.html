@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first section in website development</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding: 0;
+    text-align: center;
+    font-family: arial;
+    transition: 0.5%;
+}
+    body
+        {
+            width:100vw;
+            height: 100vh;
+            background: #c8e8e0;
+            padding-top: 50px;
+
+        }
+        h2{
+            color: #2e937a;
+            font-weight: 400px;
+            text-align: center;
+
+        }
+        h1{
+            color: #2e937a;
+            font-weight: 45px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .row{
+            padding-top: 50px;
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+        .box{
+            width: 320px;
+            height: 600px;
+            padding-top: 20px;
+            background: #fff;
+          
+
+            
+        }
+        .box img {
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+        }
+        .box h1{
+            font-size: 25px;
+            padding-top: 20px;
+            color: #2e937a;
+            padding: 20px;
+        }
+        .box p{
+            color:#2e937a;
+            padding-top: 20px;
+            line-height: 25px;
+            padding: 20px;
+        }
+        .box .btn{
+            width: 150px;
+            align-self: center;
+            height: 40px;
+            background: #2e937a;
+            border-radius: 8px;
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 40px;
+            
+           
+        }
+        .box .btn:hover{
+            background: #fff;
+            color:#2e937a;
+            border: 1px solid #2e937a;
+        }
+    
+
+
+
+</style>
+
+<body>
+    <h2>FEATURES</h2>
+    <h1>Our Features and Services.</h1>
+
+    <!-- creating the first row or section -->
+     <div class="row">
+        <div class="box">
+            <img src="images/business2.jpg" >
+            <h1>Communications</h1>
+            <p>Pretium lectus uam id leo in vitae <br> turpis. Matts pellenteque id nibh <br> tortor. id</p>
+            <!-- creating a button  -->
+             <button class="btn">See More</button>
+        </div>
+        <!-- adding another item in the row -->
+        <div class="box">
+            <img src="images/business.jpg" >
+            <h1>Inspired Design</h1>
+            <p>Pretium lectus uam id leo in vitae <br> turpis. Matts pellenteque id nibh <br> tortor. id</p>
+            <!-- creating a button  -->
+             <button class="btn">See More</button>
+        </div>
+        <!-- another item in the row -->
+        <div class="box">
+            <img src="images/business3.jpg" >
+            <h1>Happy Customer</h1>
+            <p>Pretium lectus uam id leo in vitae <br> turpis. Matts pellenteque id nibh <br> tortor. id</p>
+            <!-- creating a button  -->
+             <button class="btn">See More</button>
+        </div>
+     </div>
+
+    
+</body>
+</html>
